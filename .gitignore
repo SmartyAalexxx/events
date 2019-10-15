@@ -1,0 +1,3 @@
+*.spd
+node_module
+*-assets
