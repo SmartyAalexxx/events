@@ -49,28 +49,27 @@
                     <ul class="courses">
                         <li class="course">
                             <span class="course__number text-yellow"> <i class="fas fa-chevron-right"></i> 01</span>
-                            <span class="course__text">Cras ultricies ligula sed    mag.</span>
+                            <span class="course__text">Cras ultricies ligula sed mag.</span>
                         </li>
                         <li class="course">
                             <span class="course__number text-pink"><i class="fas fa-chevron-right"></i> 02</span>
-                            <span class="course__text">Pellentesque in ipsum id orci    porta dapibus.</span>
+                            <span class="course__text">Pellentesque in ipsum id orci porta dapibus.</span>
                         </li>
                         <li class="course">
                             <span class="course__number text-blue"><i class="fas fa-chevron-right"></i> 03</span>
-                            <span class="course__text">Curabitur arcu erat, accumsan    id imperdiet et, porttitor at sem.</span>
+                            <span class="course__text">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</span>
                         </li>
                         <li class="course">
                             <span class="course__number text-green"><i class="fas fa-chevron-right"></i> 04</span>
-                            <span class="course__text">Cras ultricies ligula sed    magna dictum portaurabitur arcu.</span>
+                            <span class="course__text">Cras ultricies ligula sed magna dictum portaurabitur arcu.</span>
                         </li>
                         <li class="course">
                             <span class="course__number text-red"><i class="fas fa-chevron-right"></i> 05</span>
-                            <span class="course__text">Proin eget tortor risus.
-                            </span>
+                            <span class="course__text">Proin eget tortor risus. </span>
                         </li>
                         <li class="course">
                             <span class="course__number text-yellow"><i class="fas fa-chevron-right"></i> 06</span>
-                            <span class="course__text">Nulla quis lorem ut libero   malesuada feugiat.</span>
+                            <span class="course__text">Nulla quis lorem ut libero malesuada feugiat.</span>
                         </li>
                     </ul>
                     <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>  
@@ -145,26 +144,49 @@
             <!-- Sponsorship -->
             <div class="container">
                 <h2 class="section__title text-center">Sponsorship</h2>
+<ul class="sponsors">
+    <li class="sponsor">
+        <a href="#" class="sponsor__link">
+            <img src="img/clients-01.png" alt="" class="sponsor__img">
+        </a>
+    </li>
+    <li class="sponsor">
+        <a href="#" class="sponsor__link">
+            <img src="img/clients-02.png" alt="" class="sponsor__img">
+        </a>
+    </li>
+    <li class="sponsor">
+        <a href="#" class="sponsor__link">
+            <img src="img/clients-03.png" alt="" class="sponsor__img">
+        </a>
+    </li>
+    <li class="sponsor">
+        <a href="#" class="sponsor__link">
+            <img src="img/clients-04.png" alt="" class="sponsor__img">
+        </a>
+    </li>
+</ul>
+
             </div>
         </section>
-        <section class="section section--extra-padding jury">
+        <section class="section section--extra-padding section--bg-jury">
             <!-- block Jury 2017 -->
             <div class="container">
                 <h2 class="section__title text-center">Jury 2017</h2>
                 <div class="users">
-                    <div class="user">
+                    <div class="user user--round">
                         <div class="user__wrap"><img class="user__img" src="img/7kyle.png" alt="Kyle"></div>
-                        <div class="user__name">Kyle</div>
+                        <div class="user__name">Kyle Loftus</div>
                         <div class="class__position">Creative Director at Amazing Game</div>
                     </div>
-                    <div class="user">
+                    <div class="user user--round">
                         <div class="user__wrap"><img class="user__img" src="img/8pete.png" alt="Pete"></div>
-                        <div class="user__name">Pete</div>
+                        <div class="user__name">Pete Bellis</div>
                                 <div class="class__position">Creative Director at Amazing Game</div>
                     </div>
-                    <div class="user">
+                    <div class="user user--round">
                         <div class="user__wrap"><img class="user__img" src="img/9joe.png" alt="Joe"></div>
-                        <div class="user__name">Joe</div>
+                        <div class="user__name">Joe Garnder</div>
                         <div class="class__position">Creative Director at Amazing Game</div>
                     </div>
                 </div>
@@ -173,14 +195,40 @@
         <section class="section section--extra-padding">
             <!-- Contact Us -->
             <div class="container">
-
-
+               <div class="text-center">
+                    <h2 class="section__title">Contact Us</h2>
+                    <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec sollicitudin molestie malesuada.</p>
+               </div>
+                <form action="" method="POST" name="contact" class="form-contact" autocomplete="off">
+                    <div class="row">
+                        <div class="col">
+                            <input class="form-contact__input"  type="text" name="firstname" id="firstname">
+                            <label class="form-contact__label" for="firstname">First name</label>
+                        </div>
+                        <div class="col">
+                            <input class="form-contact__input" type="text" name="lastname" id="lastname">
+                            <label class="form-contact__label" for="lastname">Last Name</label>
+                        </div>
+                    </div>                    
+                </form>                
             </div>
         </section>
 
     </main>
-    <footer>
+    <footer class="section text-center">
             <div class="container">
+                <h3>Newsletter</h3>
+                <p class="text-medium">If you would like to hear first and to receive updates please subscribe to our newsletter.</p>
+                <form action="#" method="POST" name="subscribe" class="form-subscribe">
+                    <input class="form-subscribe__input" type="email" name="email" placeholder="email address">
+                    <button class="btn" type="submit">subscribe</button>
+                </form>
+                <ul class="socials">
+                    <li class="social"><a href="#" class="social__link"><i class="fab fa-twitter"></i></a></li>
+                    <li class="social"><a href="#" class="social__link"><i class="fab fa-dribbble"></i></a></li>
+                    <li class="social"><a href="#" class="social__link"><i class="fab fa-instagram"></i></a></li>
+                    <li class="social"><a href="#" class="social__link"><i class="fab fa-pinterest-p"></i></a></li>
+                </ul>
             </div>
     </footer>
     <script src="https://kit.fontawesome.com/20ed8529b5.js" crossorigin="anonymous">
