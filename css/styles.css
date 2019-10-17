@@ -131,6 +131,25 @@ p {
     background-color: #fff;
     
 }
+.btn--sharp{
+    border-radius: 0;
+}
+
+.btn--dark{
+    background-color: #555;
+    border-color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    font-weight: 400;
+} 
+.btn--dark:active,
+.btn--dark:focus,
+.btn--dark:hover{
+color: #555;
+background-color: #fff;
+}
+
 /* nav */
 header {
     position: absolute;
@@ -225,8 +244,12 @@ header {
 }
 
 /* text aling */
+
 .text-center {
     text-align: center;
+}
+.text-right {
+    text-align: right;
 }
 /* courses */
 .courses {
@@ -404,9 +427,7 @@ footer {
     background-color: #eee;
 }
 
-.form-subscribe{
 
-}
 .form-subscribe__input {
     font-size: 2.2rem;
     font-weight: 800;   
@@ -461,19 +482,23 @@ footer {
 .form-contact{
     max-width: 650px;
     margin: 0 auto;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 .form-contact__input{
     display: inline-block;
     width: 100%;
     border: none;
-    border-bottom: 4px solid #000;
+    border-bottom: 2px solid #000;
     transition: all .25s ease-in;
-    padding: 15px 0;
-    
+    padding: 15px 0;   
+    font-size: 1.6rem;
+}
+textarea.form-contact__input{
+    resize: none;
 }
 
-.form-contact__input:focus {
+.form-contact__input:focus,
+.form-contact__input.filled {
     outline: none;
     border-color: transparent;
    
@@ -487,20 +512,30 @@ footer {
     transform: translate(0, -100%);
     padding: 15px 0;
 }
-.form-contact__input:focus + .form-contact__label{
-    transform: translate(0, 0);
+.form-contact__input:focus + .form-contact__label,
+.form-contact__input.filled + .form-contact__label {
+    transform: translate(0, -20%);
     transition: all .25s ease-in-out;
+    z-index: 1;
 }
 
 .row {
     display: flex;
     justify-content: space-between;
-    outline: 2px solid blue;
+    margin-top: 20px;
+    
+}
+.row--right{
+    flex:end;
 }
 
 .col {
     width: calc(50% - 15px);
-    outline: 1px solid green;
     position: relative;
+    border-bottom: 2px solid #000;
+    font-size: 0;
 }
 
+.col--lg{
+    width: 100%;
+}
