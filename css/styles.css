@@ -7,7 +7,10 @@
 html{
     height: 100%;
     font-size: 10px;
+    scroll-behavior: smooth;
 }
+
+
 
 body {
     margin: 0;
@@ -159,6 +162,7 @@ header {
     z-index: 1;
 }
 .nav {
+    padding: 5px 5%;
     font-weight: 800;
     display: flex;
     align-items: baseline;
@@ -334,6 +338,8 @@ header {
     transform: translate(-50%, -50%);
     width: 100%;
     border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
 
 }
 
@@ -362,7 +368,8 @@ header {
     text-align: center;
 }
 .countdown__item {
-    min-width: 178px;
+    max-width: 180px;
+    width: 100%;
     display: inline-block;
     padding: 35px;
     margin: 15px;
@@ -526,7 +533,7 @@ textarea.form-contact__input{
     
 }
 .row--right{
-    flex:end;
+    justify-content: center;
 }
 
 .col {
@@ -539,3 +546,22 @@ textarea.form-contact__input{
 .col--lg{
     width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+    html {font-size: 8px;}
+    .cover__text {
+        font-size: 3rem;
+        margin-bottom: 2em;}
+    .section--extra-padding{padding: 80px 0;}
+    .courses {columns: 1}
+    .text-small {font-size: 0.8em;}
+    .btn{padding: 10px 20px;}
+
+    .user {width: 45%; }
+    .countdown__item{margin: 4% 4%;}
+    .users:nth-of-type(1){
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-contact__label{font-size: 1.6rem;}
+}    

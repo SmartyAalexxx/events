@@ -7,18 +7,29 @@
     <link rel="shortcut icon" href="favicon.ico" >
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Document</title>
+    <title>Events</title>
 </head>
 <body>
+    <!-- to do:
+    1) адаптировать под телефон:
+        +размер текста, заголовка, 
+        +размер кнопок, 
+        Якоря (id и ссылки), 
+        +отступы (паддинг-и) ;
+        верстка не должна сыпаться.
+    2) поправить картинки до одного из 2х видов (размеров);    
+    3) чуть JS-а:  
+        Таймер рабочий, поправить поля в последней секции
+    -->
     <header>
         <div class="container">
             <nav class="nav">
                 <a href="#" class="logo">Event</a>
                 <ul class="menu">
-                    <li class="menu__item"><a href="#" class="menu__link">About </a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Jury</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link active">Competitors</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Contact Us</a></li>
+                    <li class="menu__item"><a href="#about" class="menu__link">About </a></li>
+                    <li class="menu__item"><a href="#competitors" class="menu__link">Competitors</a></li>
+                    <li class="menu__item"><a href="#jury" class="menu__link">Jury</a></li>
+                    <li class="menu__item"><a href="#contact" class="menu__link">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,7 +49,7 @@
                     </div>
                 </div>                
         </section>
-        <section class="section section--extra-padding">
+        <section class="section section--extra-padding" id="about">
             <!-- Desing battles -->
             <div class="container">
                 <h2 class="section__title text-purple">Design Battles</h2>
@@ -79,7 +90,7 @@
                     <a href="#" class="btn"> Download Our Case Study</a>   
             </div>
         </section>
-        <section class="section section--extra-padding section--light section-gradient">
+        <section class="section section--extra-padding section--light section-gradient" id="competitors">
             <div class="container">
                     <!-- They already said Battles -->
                 <div class="text-center">
@@ -120,21 +131,21 @@
                 </div>
                 <!-- Cowntdown -->
                     <h2 class="section__title text-center"> Countdown</h2>
-                <div class="countdown">
+                <div class="countdown" id="countdown">
                     <span class="countdown__item countdown__item--transparent">
-                        <div class="countdown__num">37</div>
+                        <div id ="days" class="days countdown__num">37</div>
                         <div class="countdown__text">days </div>
                     </span>
                     <span class="countdown__item">
-                        <div class="countdown__num">13</div>
+                        <div class="hours countdown__num">13</div>
                         <div class="countdown__text">hours</div>
                     </span>
                     <span class="countdown__item">
-                        <div class="countdown__num">45</div>
+                        <div class=" minutes countdown__num">45</div>
                         <div class="countdown__text">minutes</div>
                     </span>
                     <span class="countdown__item">
-                        <div class="countdown__num">26</div>
+                        <div class="seconds countdown__num">26</div>
                         <div class="countdown__text">seconds</div>
                     </span>
                 </div>
@@ -169,7 +180,7 @@
 
             </div>
         </section>
-        <section class="section section--extra-padding section--bg-jury">
+        <section class="section section--extra-padding section--bg-jury" id="jury">
             <!-- block Jury 2017 -->
             <div class="container">
                 <h2 class="section__title text-center">Jury 2017</h2>
@@ -192,7 +203,7 @@
                 </div>
             </div>
         </section>
-        <section class="section section--extra-padding">
+        <section class="section section--extra-padding" id="contact">
             <!-- Contact Us -->
             <div class="container">
                <div class="text-center">
@@ -251,15 +262,7 @@
     </footer>
     <script src="https://kit.fontawesome.com/20ed8529b5.js" crossorigin="anonymous">
     </script>
-    <script>
-        let inputs = document.querySelectorAll('.form-contact__input');
-        inputs.forEach(function(input) {
-            input.addEventListener('change', function() {
-                if (this.value.length > 0) {
-                    this.classList.add('filled');
-                }
-            })
-        });
+    <script src="js/scripts.js" async>
     </script>
 </body>
 </html>
